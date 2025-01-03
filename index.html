@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web to Lead</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
   <body>
@@ -21,10 +22,11 @@
         name="retURL"
         value="https://rish0510.github.io/Mini-Project1/thanks.html"
       />
+      <input type="hidden" name="Lead_Date__c" class="outputdate" />
       <input
         type="hidden"
-        name="Lead_Date__c"
-        class="outputdate"
+        name="captcha_settings"
+        value='{"keyname":"Web_to_Lead_MiniProj","fallback":"true","orgId":"00DdM00000BW0eT","ts":""}'
       />
 
       <label for="first_name">First Name</label
@@ -58,7 +60,7 @@
       /><br />
 
       <label for="email">Lead Date</label>
-      <input type="date" required="true" class="inputdate"/>
+      <input type="date" required="true" class="inputdate" />
       <!-- Lead Date:<span class="dateInput dateOnlyInput"
         ><input
           id="00NdM00000BBpqU"
@@ -68,6 +70,12 @@
       ><br />
  -->
       <input type="submit" name="submit" class="submit" />
+
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeX5qwqAAAAADBg9lKOGMgCURh3DTIt6D6lJ1yS"
+      ></div>
+      <br />
     </form>
   </body>
 </html>
